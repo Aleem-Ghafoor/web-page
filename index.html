@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="template/index.css">  
+    <link rel="stylesheet" href="template/header-footer.css"> 
+</head>
+<body>  
+
+    <header class="header">
+
+        <img src="images/aleem.jpg" alt="Aleem Ghafoor" width="70" style="border-radius: 50%;" title="profile photo" id="profile-photo"> 
+
+        <p id="name">Aleem Ghafoor</p>
+
+        <nav class="nav">
+            <a href="index.html" title="Home page" id="home-link">Home</a> |
+            <a href="about.html" title="About Me page" id="about-link">About</a> | <a href="projects.html" title="My Projects page" id="projects-link" onclick="sessionStorage.setItem('allowProjects', 'yes')">projects</a> 
+        </nav>
+
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <h1 id="page-title">Hi, I’m Aleem Ghafoor</h1>
+            <p>
+                I am a Software Engineering student who is learning web development step by step.
+            </p>
+        </section>
+
+        <div class="main-content">
+            <div class="text-boxes">
+                <p id="intro-text">
+                    This website is a part of my learning journey where I practice HTML, CSS, layouts, images, links, and clean page structure.
+                </p>
+
+                <p id="day2-text">
+                    My goal is to improve my skills by building small projects and turning them into a complete personal portfolio.
+                </p>
+
+                <p id="goal-text">
+                    Here, you can explore my practice work, projects, and progress as I continue learning and building.
+                </p>
+            </div>
+
+            <img src="images/learning.jpg" width="200" alt="boy working on html and css" title="boy working on html and css" id="side-image">
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="footer-text">&copy; 2023 Aleem Ghafoor. All rights reserved.</p>
+    
+        <nav class="contact-links">
+            <a href="http://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com&su=Contact%20from%20my%20website&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you." target="_blank" rel="noopener noreferrer" title="Email me" id="email-link">Email Me</a>
+
+            <a href="tel:+92300000000" rel="noopener noreferrer" title="Call me" id="call-link">Call Me</a>
+            
+            <a href="http://wa.me/92300000000" target="_blank" rel="noopener noreferrer" title="WhatsApp me" id="whatsapp-link">WhatsApp Me</a>
+        </nav>
+    </footer>
+</body>
+</html>

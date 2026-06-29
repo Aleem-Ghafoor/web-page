@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+body {
+    color: #111827;
+    
+}
+.main{
+    padding: 20px;
+    background-color: #f9fafb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image:linear-gradient(
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.55)
+), url('../images/laptop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.about-section {
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1000px;
+    background: rgba(15, 23, 42, 0.78);
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.about-content, .academic-background, .my-skills, .my-improvements, .my-goal {
+    padding: 25px;
+    background: #f8fbff;
+    color: #0f172a;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+    cursor: pointer;
+}
+
+.about-content h2, .academic-background h2, .my-skills h2, .my-improvements h2, .my-goal h2{
+    color: #1661b7;
+}
+
+.about-content p, .academic-background p, .my-skills p, .my-improvements p, .my-goal p,
+.my-skills li {
+  color: #334155;
+}
+
+/* Mobile Responsive Version */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main {
+        min-height: 100vh;
+        padding: 10px;
+
+        background-image: url('');
+        background-color: #cad5e0;
+    }
+
+    .about-section {
+        width: 95%;
+        max-width: 95%;
+        padding: 20px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+
+    .about-section h1 {
+        font-size: 1.6em;
+        margin-bottom: 18px;
+    }
+
+    .about {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-content, 
+    .academic-background, 
+    .my-skills, 
+    .my-improvements, 
+    .my-goal {
+        width: 100%;
+        padding: 18px;
+        font-size: 0.95rem;
+        overflow-wrap: break-word;
+    }
+
+    .my-goal {
+        grid-column: auto;
+    }
+
+    .about-content:hover, 
+    .academic-background:hover, 
+    .my-skills:hover, 
+    .my-improvements:hover, 
+    .my-goal:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .about-content:active, 
+    .academic-background:active, 
+    .my-skills:active, 
+    .my-improvements:active, 
+    .my-goal:active {
+        transform: scale(0.98);
+    }
+}
