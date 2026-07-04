@@ -46,9 +46,21 @@ body{
   gap: 30px;
   margin: 40px auto;
   padding: 40px 20px;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0px auto;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
 
+  /* Firefox aur purane Edge ke liye */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Edge aur Safari ke liye */
+.projects::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .project-card{
@@ -73,35 +85,110 @@ body{
 #p1 p, #p2 p, #p3 p, #p4 p, #p5 p, #p6 p{
   margin-top: 10px;
   color: #334155;
+  font-size: 20px;
 }
 
 #p1 h2, #p2 h2, #p3 h2, #p4 h2, #p5 h2, #p6 h2{
   color: #0f172a;
 }
 
-#pic{
+.pic{
   width: 100%;
   object-fit: cover;
   margin-bottom: 15px;
   display: block;
   box-shadow: 0px 3px 10px black;
+  border-radius: 10px;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-#pic:hover{
+.pic:hover{
   transform: scale(1.08);
   opacity: 0.9;
 }
 
-#p2 #pic, #p4 #pic, #p6 #pic{
+#p2 .pic, #p4 .pic,#p5 .pic, #p6 .pic{
   margin-bottom: 40px;
 }
 
-#p5 #pic{
+#p5 .pic{
   height: 250px;
 }
 
+.faq-section{
+  background-color: #f8fafc;
+  padding: 70px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
+.faq-section h2 {
+  color: #0f172a;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.faq-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #1661b7;
+  border-radius: 10px;
+  margin: 10px auto 0;
+}
+
+.faq-section details {
+  background-color: white;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(22, 97, 183, 0.08);
+}
+
+.faq-section summary {
+  padding: 20px 60px 20px 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.faq-section details[open] summary {
+  color: #1661b7;
+  border-bottom: 1px solid #dbeafe;
+  font-size: 25px;
+}
+
+.faq-section summary::after {
+  transition: transform 0.3s ease,
+              background-color 0.3s ease;
+}
+
+.faq-section details p {
+  padding: 18px 22px 22px;
+  color: #475569;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.faq-section details {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.faq-section details:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 8px 20px rgba(22, 97, 183, 0.14);
+}
 /* Responsive Design */
 
 @media (max-width: 1024px) {
@@ -132,30 +219,69 @@ body{
   }
 
   .projects {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 20px;
     padding: 30px 15px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .projects::-webkit-scrollbar {
+    display: none;
   }
 
   .project-card {
-    width: 90%;
-    min-width: unset;
+    flex: 0 0 280px;
+    width: 280px;
+    min-width: 280px;
     padding: 18px;
   }
 
-  #pic {
+  .pic {
     height: auto;
   }
 
-  #p2 #pic,
-  #p4 #pic,
-  #p6 #pic {
-    margin-bottom: 15px;
+  #p1 .pic,
+  #p2 .pic,
+  #p3 .pic,
+  #p4 .pic,
+  #p6 .pic {
+    margin-bottom: 70px;
   }
 
-  #p5 #pic {
+  #p5 .pic {
     height: auto;
+  }
+
+   .faq-section {
+    padding: 50px 15px;
+  }
+
+  .faq-container h2 {
+    font-size: 30px;
+  }
+
+  .faq-container summary {
+    padding: 18px 55px 18px 18px;
+    font-size: 17px;
+  }
+
+  .faq-container details p {
+    padding: 16px 18px 20px;
+    font-size: 15px;
+  }
+
+  .faq-container summary::after {
+    right: 16px;
+    width: 29px;
+    height: 29px;
+    font-size: 20px;
   }
 }
 
